@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <link href="./css/output.css" rel="stylesheet">
+</head>
+<body class="bg-[#0F1729] px-10">
+    <div class="bg-[#333A49] border-0 border-gray-50 content-center flex flex-col gap-5 p-3 rounded-lg drop-shadow-2xl drop-shadow-[#121938] m-auto mt-10">
+        <h1 class="font-bold text-[#B3C5EF] text-center text-2xl">To-Do List</h1>
+        <h4 class="font-bold text-[#B3C5EF] text-center text-xl">Organize and complete your tasks</h4>
+        <form class="gap-10 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+            <!-- ADD TASK FIELD -->
+            <label for="" class="flex flex-col text-[#828DF8] gap-1.5">
+                Add Task
+                <input id="text_input" class="rounded-md border-2 border-[#828DF8] bg-[#0F1729] text-[#828DF8] px-4 py-1 placeholder:text-gray-400" type="text" name="" id="" placeholder="Add a todo ...">
+            </label>
+
+            <!-- DUE DATE PICKER -->
+            <label for="" class="flex flex-col text-[#828DF8] gap-1.5">
+                Due Date
+                <input id="date_input" class="rounded-md border-2 border-[#828DF8] bg-[#0F1729] text-[#828DF8] px-4 py-1 placeholder:text-gray-400" type="date">
+            </label>
+
+            <!-- STATUS DROPDOWN -->
+            <label for="" class="flex flex-col text-[#828DF8] gap-1.5">
+                Status
+                <select id="status_input" class="rounded-md border-2 border-[#828DF8] bg-[#0F1729] text-[#828DF8] px-4 py-1 placeholder:text-gray-400">
+                    <option value="Not started yet">Not started yet</option>
+                    <option value="Ongoing">Ongoing</option>
+                    <option value="Done">Done</option>
+                </select>
+            </label>
+
+            <div class="flex flex-row gap-3">
+                <!-- ACTIONS TEXT AREA -->
+                <label for="" class="flex flex-col text-[#828DF8] gap-1.5">
+                    Actions
+                    <textarea name="" id="actions_input" class="field-sizing-content w-55 max-w-55 resize-y overflow-hidden rounded-md border-2 border-[#828DF8] bg-[#0F1729] text-[#828DF8] px-4 py-1 placeholder:text-gray-400" placeholder="Add actions you will do ..."></textarea>
+                </label>
+    
+                <!-- ADD TO DO BUTTON -->
+                <input id="add_task_button" class="rounded-md bg-[#828DF8] text-[#0F1729] px-4 py-1 text-2xl font-semibold" type="button" value="+">
+            </div>
+        </form>
+        <section class="flex flex-row justify-between">
+            <!-- FILTER BUTTON -->
+            
+            <select id="filter_select" class="bg-[#1D283A] text-[#A6C4E4] rounded-md py-1 px-4">
+                <option value="All">All</option>
+                <option value="Not started yet">Not started yet</option>
+                <option value="Ongoing">Ongoing</option>
+                <option value="Done">Done</option>
+            </select>
+            
+            <!-- <input class="bg-[#1D283A] text-[#A6C4E4] rounded-md py-1 px-4" type="button" value="FILTER"> -->
+
+            <!-- DELETE BUTTON -->
+            <input id="delete_all_button" type="button" value="DELETE ALL" class="rounded-md bg-[#828DF8] text-[#0F1729] px-4 py-1 font-semibold">  
+        </section>
+        <table class="content-center border-separate border-spacing-0 rounded-md overflow-hidden">
+            <thead class="text-center bg-[#0E1525]">
+                <tr class="text-[#A6C4E4]">
+                    <th class="py-3 px-4">TASK</th>
+                    <th class="py-3 px-4">DUEDATE</th>
+                    <th class="py-3 px-4">STATUS</th>
+                    <th class="py-3 px-4 w-55 max-w-55">ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody id="item_body" class="bg-[#0F1729] text-[#A6C4E4]">
+            </tbody>
+        </table>
+        <h6 class="self-center text-[#b1b8fc] text-[85%]">© To-Do List | Coding Camp 02Feb26 OeiBryant </h6>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
